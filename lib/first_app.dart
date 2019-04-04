@@ -4,6 +4,7 @@ import 'package:hello/demo/bottom_navigation_bar_demo.dart';
 import 'package:hello/demo/draw_demo.dart';
 import 'package:hello/demo/layout_demo.dart';
 import 'package:hello/demo/listview_demo.dart';
+import 'package:hello/demo/tabview_demo.dart';
 
 main() => runApp(App());
 
@@ -28,7 +29,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: Container(
@@ -59,6 +60,9 @@ class Home extends StatelessWidget {
               Tab(
                 icon: Icon(Icons.directions_bike),
               ),
+              Tab(
+                icon: Icon(Icons.view_quilt),
+              ),
             ],
           ),
         ),
@@ -67,6 +71,7 @@ class Home extends StatelessWidget {
             ListViewDemo(),
             BasicDemo(),
             LayoutDemo(),
+            TabViewDemo(),
           ],
         ),
         drawer:DrawerDemo(),
