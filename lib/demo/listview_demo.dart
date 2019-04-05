@@ -5,25 +5,31 @@ class ListViewDemo extends StatelessWidget{
   Widget _listItemBuilder(BuildContext context, int index) {
     return Container(
         margin: EdgeInsets.all(10.0),
-        child: Column(
+        child: Stack(
           children: <Widget>[
-            Image.network(posts[index].imgUrl),
-            SizedBox(
-              height: 8.0,
+            Column(
+              children: <Widget>[
+                Image.network(posts[index].imgUrl),
+                SizedBox(
+                  height: 8.0,
+                ),
+                Text(
+                  posts[index].title,
+                  style: Theme.of(context).textTheme.title,
+                ),
+                Text(
+                  posts[index].author,
+                  style: Theme.of(context).textTheme.subtitle,
+                ),
+                SizedBox(
+                  height: 8.0,
+                ),
+              ],
             ),
-            Text(
-              posts[index].title,
-              style: Theme.of(context).textTheme.title,
-            ),
-            Text(
-              posts[index].author,
-              style: Theme.of(context).textTheme.subtitle,
-            ),
-            SizedBox(
-              height: 8.0,
-            ),
+            
           ],
-        ));
+        ) ,
+    );
   }
 
   @override
