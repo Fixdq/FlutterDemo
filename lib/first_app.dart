@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hello/binli/main.dart';
 import 'package:hello/demo/basic_demo.dart';
 import 'package:hello/demo/bottom_navigation_bar_demo.dart';
 import 'package:hello/demo/draw_demo.dart';
+import 'package:hello/demo/form_demo.dart';
 import 'package:hello/demo/layout_demo.dart';
 import 'package:hello/demo/listview_demo.dart';
 import 'package:hello/demo/navigator_demo.dart';
@@ -15,16 +17,19 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.yellow,
+        primaryColor: Colors.blue,
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white70,
+        accentColor: Colors.lightGreenAccent,
       ),
       title: 'title',
 //      home: NavigatorDemo(),
       initialRoute: '/',
       routes: {
-        '/':(context) => Home(),
-        '/about':(context) => Page(title: 'About',)
+        '/':(context) => BinLi(),
+        '/home':(context) => Home(),
+        '/about':(context) => Page(title: 'About',),
+        '/form':(context) => FormDemo()
       },
     );
   }
@@ -35,6 +40,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
+      initialIndex: 1,
       child: Scaffold(
           appBar: AppBar(
             title: Container(
