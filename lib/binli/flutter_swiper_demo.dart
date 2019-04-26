@@ -65,10 +65,16 @@ class FSwiperItemView extends StatelessWidget {
             ],
           ),
           Container(
-
-            child:Text(
-              '数据源于计划总结',
-              textAlign:TextAlign.left,
+            width: double.infinity,
+            child:Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  '数据源于计划总结',
+                  textAlign:TextAlign.center,
+                ),
+              ),
             ),
           )
         ],

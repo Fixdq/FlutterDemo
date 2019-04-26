@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello/binli/bottom_navigation_bar.dart';
+import 'package:hello/binli/bottom_tab_view_demo.dart';
 import 'package:hello/binli/main.dart';
 import 'package:hello/demo/basic_demo.dart';
 import 'package:hello/demo/bottom_navigation_bar_demo.dart';
@@ -24,9 +26,11 @@ class App extends StatelessWidget {
       ),
       title: 'title',
 //      home: NavigatorDemo(),
-      initialRoute: '/',
+      initialRoute: '/apppage',
       routes: {
         '/':(context) => BinLi(),
+        '/apppage':(context) => AppPage(),
+        '/bnb':(context) => BNB(),
         '/home':(context) => Home(),
         '/about':(context) => Page(title: 'About',),
         '/form':(context) => FormDemo()
